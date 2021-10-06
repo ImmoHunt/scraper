@@ -1,0 +1,63 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    {% load static %}
+    <!-- Prism CSS -->
+    <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>    
+.hero-image { 
+  background-image: url("../media/images/Island%20goraa.JPG");
+  <!--background-color: #A52A2A; -->
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+}
+body {
+  background: url("../media/images/Island%20goraa.JPG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed
+}
+</style>
+</head>
+<!--  <div class="hero-image"> -->
+<body>
+  <!-- <div class="hero-image"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header class="header">
+  <nav class="navbar">
+    <!--<div class="nav-wrapper">-->
+      <a href="/" class="brand-logo left">Blog</a>
+      {% if is_mobile %}
+	<ul class="nav-menu">
+      {% else %}
+      <ul id="nav-mobile" class="right"><!-- hide-on-med-and-down">-->
+      {% endif %}
+        {% include 'main/includes/navbar.html' %}
+      </ul>
+    <!--</div> -->
+      <div class="hamburger">
+	<span class="bar"></span>
+	<span class="bar"></span>
+	<span class="bar"></span>
+      </div>
+  </nav>
+</header>
+  {% include 'main/includes/messaging.html' %}
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+   <!-- </div> -->
+</body>
+<!-- </div> -->
+
+<!-- Prism JS -->
+<script src="{% static "tinymce/js/prism.js" %}"></script>
+<script src="/header.js"></script>
+<script>M.AutoInit();</script>

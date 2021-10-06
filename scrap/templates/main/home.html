@@ -1,0 +1,27 @@
+{% extends 'main/header.html' %}
+.hero-image {
+  <-- background-image: url("45.9.188.43/media/images/Island goraa..jpg"); -->
+  background-image: url("/w3images/photographer.jpg");
+  background-color: #cccccc;
+  height: 3000px;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+}
+
+{% block content %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="row">
+    {% for test in tests %}
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1 hoverable">
+            <div class="card-content white-text">
+              <span class="card-title">{{test.test_title}}</span>
+              <p style="font-size:70%">Published {{test.test_published}}</p>
+              <p>{{test.test_content|safe}}</p>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}

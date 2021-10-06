@@ -1,0 +1,72 @@
+
+{% extends 'main/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'item.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+div.row {
+	text-align: center;
+}
+</style>
+
+{% block content %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="row">
+    {% if is_mobile %}
+    <div> <!--class="col s12, m8, l4">-->
+    {% else %}
+    <!--<div class="col s12, m8, l4">-->
+    <div>
+    {% endif %}
+      <h3>{{item.item_title}}</h3>
+      <p style="font-size:70%;">Published {{item.item_published}}</p>
+      <p>{{item.item_content|safe}}</p>
+      {% if item.item_photo != "default.jpg" %}
+          <img src="{{item.item_photo.url}}" alt="Smiley" style="max-width:100%;height:auto;"> <!--media="(max width: 600px max height: 400px)">--> <!-- width="600" height="800"> -->
+      {% endif %}
+      {% if item.item_video != "def_vid.mp4" %}
+      <video style="max-width:100%; height:auto;" controls >
+      <source src="{{item.item_video.url}}" alt="Smiley" style="max-width:100%; height:auto;"><!--width="600px" height="auto" type="video/mp4">-->
+      {% endif %}
+      <br />
+    </div>
+    
+    <div class="col s12 m6 l4">
+      <ul class="collapsible popout">
+        {% for item in sidebar %}
+          {% if forloop.counter0 == this_item_idx %}
+            <li class="active">
+              <div class="collapsible-header">{{item.item_title}}<br><b>(currently viewing)</b></div>
+            </li>
+          {% else %}
+            <li>
+	      <img src="{{item.item_photo.url}}" width="100" height="75" />
+              <div class="collapsible-header">{{item.item_title}}</div>
+              <div class="collapsible-body">
+		<img src="{{item.item_photo.url}}" width="250" height="200" />
+                <p><a href="/{{item.item_slug}}"><button class="btn waves-effect waves-light right-align" style=
+                  "background-color:yellow; color:black">Go</button></a></p>
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <li><span>
+	<form action='comment/' method='GET' id="{{item.item_slug}}">
+	  <button type='submit'>Add comment</button>
+        </form>
+	</span> </li>
+	{% for item in comments %}
+		<li>
+		    <div class="collapsible-header">{{item.comment_title}}</div>
+		    <div class="collapsible-body">
+			<div>{{item.comment_content}}</div>
+		    </div>
+		</li>
+	{% endfor %}
+	<!--</div>
+	</ul>-->
+      </ul>
+    </div>  
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button style="background-color:#DA6146; color:yellow" class="btn btn-outline-info" type="submit">Add Blog User</button> 
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,11 @@
+<meta name="viewort" content="width=device-width, initial-scale=1.0">
+{% if is_mobile %
+<li><a href="/">Home</a></li>
+<li><a href="/community">Community</a></li>
+{% if user.is_authenticated %}
+  <li><a href="/account">{{user.username|title}}</a></li>
+  <li><a href="/logout">Logout</a></li>
+{% else %}
+  <li><a href="/login">Login</a></li>
+  <li><a href="/register/">Register</a></li>
+{% endif %}

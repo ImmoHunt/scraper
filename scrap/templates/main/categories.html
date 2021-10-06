@@ -1,0 +1,22 @@
+
+{% extends 'main/header.html' %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% load static %}
+<link rel="stylesheet" href="{% static 'categories.css' %}">
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="row">
+    {% for cat in categories %}
+      <div class="col s12 m6 l4", background="color: #E1E614">
+        <a href="{{cat.category_slug}}", background="color:#e1e614"><!--, style="color:#000">-->
+          <div class="card hoverable", background="color: #E1E614">
+            <div class="card-content", background="color: #E1E614">
+              <div class="card-title", background="color: #E1E614">{{cat.item_category}}</div>
+              <p>{{cat.category_summary}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}    

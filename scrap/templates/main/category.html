@@ -1,0 +1,21 @@
+{% extends 'main/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'category.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="row">
+    {% for it, partone in part_ones.items %}
+      <div class="col s12 m6 l4">
+        <a href="{{partone}}", background="color:#E1E614",>
+          <div class="card hoverable", background="color:#E1E614">
+            <div class="card-content", background="color:#E1E614" >
+              <div class="card-title", background="color:#E1E614">{{it.item_series}}</div>
+              <p>{{it.series_summary}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}    
