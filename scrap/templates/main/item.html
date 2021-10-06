@@ -25,7 +25,7 @@ div.row {
           <img src="{{item.item_photo.url}}" alt="Smiley" style="max-width:100%;height:auto;"> <!--media="(max width: 600px max height: 400px)">--> <!-- width="600" height="800"> -->
       {% endif %}
       {% if item.item_video != "def_vid.mp4" %}
-      <video style="max-width:100%; height:auto;" controls >
+        <video style="max-width:100%; height:auto;" controls > </video>>
       <source src="{{item.item_video.url}}" alt="Smiley" style="max-width:100%; height:auto;"><!--width="600px" height="auto" type="video/mp4">-->
       {% endif %}
       <br />
