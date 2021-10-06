@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --entry ./src/core.js --output-path ./static/frontend",
-    "start": "node /templates/frotnend/index.html",
+    "start": "node /templates/frontend/index.html",
     "build": "webpack --mode production --entry ./src/core.js --output-path ./static/frontend"
   },
   "keywords": [],
