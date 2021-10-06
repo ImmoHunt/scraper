@@ -135,8 +135,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+STATIC_FRONT_URL = '/frontend/static/'
 STATIC_ROOT = '/var/www/venv/src/static/'
 MEDIA_ROOT = '/var/www/venv/src/media/'
+STATIC_FRONT_ROOT = '/var/www/venv/src/frontend/static/'
 
 #REACT PART
 REACT_APP_DIR = os.path.join(BASE_DIR, 'frontend')
