@@ -6,7 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-const AES = require('crypto-js/aes');
+//const AES = require('crypto-js/aes');
 const encryptUuid = AES.encrypt
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
