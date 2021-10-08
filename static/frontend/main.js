@@ -7,9 +7,9 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 //const AES = require('crypto-js/aes');
-const encryptUuid = AES.encrypt
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
+//const encryptUuid = AES.encrypt
+///******/ (() => { // webpackBootstrap
+///******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/components/App.js":
