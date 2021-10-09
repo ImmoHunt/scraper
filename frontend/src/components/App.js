@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component} from "react";
+import {render} from "react-dom";
 
-function App() {
+class App{
     return (
       <h1> Hello World! </h1>
     );
