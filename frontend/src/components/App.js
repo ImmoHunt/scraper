@@ -1,13 +1,15 @@
 import React, { Component} from "react";
-import {render} from "react-dom";
+import { render } from "react-dom";
 
-class App{
-    return (
-      <h1> Hello World! </h1>
-    );
+class App extends React.Component{
+    render() {
+        return (
+            <h1> Hello World! </h1>
+        );
+    }
 }
 
 export default App;
 
-const container = document.getElementById("app");
-render(<App />, container);
+//const container = document.getElementById("app");
+//render(<App />, container);
