@@ -1,9 +1,9 @@
-import React, {useDebugValue, useState, Fragment} from 'react';
+import React from 'react';
 
-const App = (props) => {
-	return (
-	<h1>Aqui nao se sabe bem que vai passar</h1>
-);
+function App() {
+    return (
+      <h1> Hello World! </h1>
+    );
 }
 
 export default App;
