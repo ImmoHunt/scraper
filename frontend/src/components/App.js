@@ -1,9 +1,9 @@
 import React, {useDebugValue, useState, Fragment} from 'react';
 
-const app = (props) => {
+const App = (props) => {
 	return (
 	<h1>Aqui nao se sabe bem que vai passar</h1>
 );
 }
 
-export default app;
+export default App;
