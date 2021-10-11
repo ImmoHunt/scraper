@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <ul>
-        <li><h1>whazza</h1>
+        <li><h1>whazza</h1></li>
         {this.state.data.map(contact => {
           return (
             <li key={contact.id}>
