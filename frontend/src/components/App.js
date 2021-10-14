@@ -1,15 +1,30 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import { Fragment, useState } from 'react';
 
-const App = () => {
-    return (
-        <div>
-        <h1>bem vindo</h1>
-        <h2>Aqui temos uma nova realidade</h2>
-        </div> );
+import Header from './Layout/Header';
+import Meals from './Meals/Meals';
+import Cart from './Cart/Cart';
+import CartProvider from '../store/CartProvider';
+
+
+function App() {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+    };
+  return (
+    <CartProvider>
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
+        <main>
+          <Meals />
+        </main>
+    </CartProvider>
+  );
 }
 
 export default App;
-
-const container = document.getElementById("app");
-render(<App />, container);
