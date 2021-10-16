@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import MealItemForm from './MealItemForm';
 
-import classes from './MealItem.module.css'
+import classes from 'style-loader!css-loader?modules!./MealItem.module.css'
 import CartContext from '../../../store/cart-context';
 
 

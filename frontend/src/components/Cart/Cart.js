@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { classExpression } from '@babel/types';
 import Modal from '../UI/Modal';
 import CartItem from './CartItem';
-import classes from './Cart.module.css';
+import classes from 'style-loader!css-loader?modules!./Cart.module.css';
 import CartContext from '../../store/cart-context';
 
 const Cart = (props) => {

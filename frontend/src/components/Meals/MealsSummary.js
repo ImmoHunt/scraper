@@ -1,4 +1,4 @@
-import classes from './MealsSummary.module.css';
+import classes from 'style-loader!css-loader?modules!./MealsSummary.module.css';
 
 const MealsSummary = () => {
     return <section className={classes.summary}>
