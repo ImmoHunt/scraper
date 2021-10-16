@@ -5,8 +5,17 @@ import Meals from './Meals/Meals';
 import Cart from './Cart/Cart';
 import CartProvider from '../store/CartProvider';
 
-
 function App() {
+  return (
+    <div>
+      <h2>Let's get started!</h2>
+    </div>
+  );
+}
+
+export default App;
+
+/*function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () => {
@@ -25,6 +34,4 @@ function App() {
         </main>
     </CartProvider>
   );
-}
-
-export default App;
+}*/
