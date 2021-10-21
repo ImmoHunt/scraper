@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import mealsImage from 'file-loader!../../assets/meals.jpg';
+//import mealsImage from 'file-loader!../../assets/meals.jpg';
 import classes from 'style-loader!css-loader?modules!./Header.module.css';
 
 
@@ -14,7 +14,7 @@ const Header = (props) => {
 
         </header>
         <div className={classes['main-image']}>
-            <img src={mealsImage} alt='A mesa cheia da comida deliciosa!' />
+            //<img src={mealsImage} alt='A mesa cheia da comida deliciosa!' />
         </div>
     </Fragment>
     );
