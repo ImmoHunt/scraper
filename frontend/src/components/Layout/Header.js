@@ -14,7 +14,6 @@ const Header = (props) => {
 
         </header>
         <div className={classes['main-image']}>
-        {% load static %}
         <img src="{% static "frontend/meals.jpg" %}" alt='A mesa cheia da comida deliciosa!' />
         </div>
     </Fragment>
