@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 
-//import mealsImage from 'file-loader!../../assets/meals.jpg';
 import classes from 'style-loader!css-loader?modules!./Header.module.css';
 
 
