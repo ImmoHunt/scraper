@@ -5,17 +5,17 @@ import Meals from './Meals/Meals';
 import Cart from './Cart/Cart';
 import CartProvider from '../store/CartProvider';
 
-function App() {
+/*function App() {
   return (
     <Fragment>
         <Header />
     </Fragment>
   );
-}
+} */
 
-export default App;
+//export default App;
 
-/*function App() {
+function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () => {
@@ -34,4 +34,5 @@ export default App;
         </main>
     </CartProvider>
   );
-}*/
+}
+export default App;
