@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-require('dotenv').config();
+process.env.MY_VARIABLE = 'kurwa';
 
 module.exports = {
   plugins: [
