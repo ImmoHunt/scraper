@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-NODE_ENV=development node server.js
+require('dotenv').config();
 
 module.exports = {
   plugins: [
