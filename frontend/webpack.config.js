@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+NODE_ENV=development node server.js
 
 module.exports = {
   plugins: [
