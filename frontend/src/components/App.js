@@ -5,16 +5,6 @@ import Meals from './Meals/Meals';
 import Cart from './Cart/Cart';
 import CartProvider from '../store/CartProvider';
 
-/*function App() {
-  return (
-    <Fragment>
-        <Header />
-    </Fragment>
-  );
-} */
-
-//export default App;
-
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 
