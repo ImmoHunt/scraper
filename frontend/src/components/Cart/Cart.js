@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { classExpression } from '@babel/types';
+
 import Modal from '../UI/Modal';
 import CartItem from './CartItem';
 import classes from 'style-loader!css-loader?modules!./Cart.module.css';
