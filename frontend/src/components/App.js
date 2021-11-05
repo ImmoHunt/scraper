@@ -6,7 +6,6 @@ import Meals from './Meals/Meals';
 function App() {
   return (
     <Fragment>
-      <Cart />
       <Header />
       <main>
         <Meals />
