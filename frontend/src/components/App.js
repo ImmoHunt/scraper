@@ -7,6 +7,7 @@ import Cart from './Cart/Cart';
 function App() {
   return (
     <Fragment>
+    <Cart />
       <Header />
       <main>
         <Meals />
