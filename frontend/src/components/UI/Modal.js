@@ -32,7 +32,7 @@ const Modal = (props) => {
          portalElement
          )}
     </Fragment>
-    ) : null;
+    ) : null
     );
 };
 
