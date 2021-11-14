@@ -5,14 +5,14 @@ import classes from 'style-loader!css-loader?modules!./AvailableMeals.module.css
 const DUMMY_MEALS = [
     {
       id: 'm1',
-      name: 'Sushi',
-      description: 'Finest fish and veggies',
+      name: 'Lasagne',
+      description: 'Finest meat with pasta',
       price: 22.99,
     },
     {
       id: 'm2',
-      name: 'Schnitzel',
-      description: 'A german specialty!',
+      name: 'Oscypek',
+      description: 'A podhalan masterpiece!',
       price: 16.5,
     },
     {
