@@ -1,4 +1,4 @@
-import { Fragment, React } from 'react';
+import { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 import classes from 'style-loader!css-loader?modules!./Modal.module.css';
