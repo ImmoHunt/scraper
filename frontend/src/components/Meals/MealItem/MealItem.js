@@ -6,7 +6,7 @@ import classes from 'style-loader!css-loader?modules!./MealItem.module.css'
 import CartContext from '../../../store/cart-context';
 
 
-const MealItem = props => {
+const MealItem = (props) => {
     const cartCtx = useContext(CartContext);
 
     const price = `$${props.price.toFixed(2)}`;
