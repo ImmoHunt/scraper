@@ -4,7 +4,7 @@ import CartContext from './cart-context';
 
 const defaultCartState = {
     items: [],
-    totalAmount: 0
+    totalAmount: 0,
 };
 
 const cartReducer = (state, action) => {
@@ -14,7 +14,6 @@ const cartReducer = (state, action) => {
         const existingCartItemIndex = state.items.findIndex(item => item.id === action.item.id);
 
         const existingCartItem = state.item[existingCartItemIndex];
-        let updatedItem;
         let updatedItems;
 
         if (existingCartItem) {
@@ -36,7 +35,7 @@ const cartReducer = (state, action) => {
     }
     if ( action.type === 'REMOVE') {
 
-        const existingCartItemIndex = state.items.findIndex(item => item.id === action.id);
+        const existingCartItemIndex = state.items.findIndex((item) => item.id === action.id);
         const existingItem = state.items[existingCartItemIndex];
         const updatedTotalAmount = state.totalAmount - existingItem.price;
         let updatedItems;
@@ -70,13 +69,13 @@ const CartProvider = (props) => {
         items: cartState.items,
         totalAmount: cartState.totalAmount,
         addItem: addItemToCartHandler,
-        removeItem: removeItemFromCartHandler
+        removeItem: removeItemFromCartHandler,
     };
 
-
-    return (<CartContext.Provider value={cartContext}>
+    return (
+        <CartContext.Provider value={cartContext}>
         {props.children}
-    </CartContext.Provider>
+        </CartContext.Provider>
     );
 };
 
