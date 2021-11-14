@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import classes from 'style-loader!css-loader?modules!./Modal.module.css';
@@ -19,13 +19,20 @@ const portalElement = document.getElementById('overlays');
 
 
 const Modal = (props) => {
+    const [domReady, setDomReady] = React.useState(false);
+    React.useEffect(() => {
+        setDomReady(true);
+    })
     return (
+    domReady ?
+    (
     <Fragment>
         {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElement)}
         {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>,
          portalElement
          )}
     </Fragment>
+    ) : null;
     );
 };
 
